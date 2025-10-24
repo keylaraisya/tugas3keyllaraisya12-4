@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Sederhana - [Nama Anda]</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Mengatur konfigurasi Tailwind dan font default -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4F46E5', // Biru Indigo
+                        'secondary': '#1F2937', // Abu-abu gelap
+                        'accent': '#F59E0B', // Kuning/Amber
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Gaya kustom untuk tampilan yang lebih rapi */
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-heading {
+            border-left: 4px solid #F59E0B; /* Aksen warna kuning */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Navbar Sederhana (Hanya logo dan navigasi) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-primary hover:text-secondary transition duration-300">
+                [NamaDepan].
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-secondary hover:text-primary transition duration-300 font-medium">Tentang</a>
+                <a href="#projects" class="text-secondary hover:text-primary transition duration-300 font-medium">Karya</a>
+                <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-indigo-600 transition duration-300 font-medium shadow-lg">Hubungi</a>
+            </nav>
+            <!-- Tombol Menu Mobile (Placeholder) -->
+            <button class="md:hidden text-secondary text-2xl">
+                <!-- Icon Menu (Lucide icon: menu) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Tarik Perhatian Utama) -->
+        <section id="home" class="bg-white pt-24 pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                
+                <!-- Konten Teks Hero -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-lg text-accent font-semibold mb-2">👋 Halo, Saya [Nama Anda]</p>
+                    <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-secondary">
+                        [Spesialisasi Anda] yang Membangun Solusi Digital.
+                    </h1>
+                    <p class="text-xl text-gray-500 mb-8 max-w-lg mx-auto md:mx-0">
+                        Saya fokus mengubah ide-ide kompleks menjadi pengalaman pengguna yang intuitif dan desain yang fungsional.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#projects" class="px-8 py-3 bg-primary text-white font-bold rounded-xl shadow-xl hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                            Lihat Karya Saya
+                        </a>
+                        <a href="#contact" class="px-8 py-3 bg-white border border-gray-300 text-secondary font-bold rounded-xl shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gambar/Visual Hero -->
+                <div class="md:w-1/2 flex justify-center">
+                    <!-- Placeholder untuk Gambar Profil -->
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 bg-gray-200 rounded-full flex items-center justify-center shadow-2xl border-4 border-primary/50 overflow-hidden">
+                        <img src="https://placehold.co/400x400/818CF8/FFFFFF?text=Foto+Profil" alt="Foto Profil Profesional" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Me Section (Tentang Saya) -->
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold mb-10 pl-6 text-secondary section-heading inline-block">Tentang Saya</h2>
+                
+                <div class="flex flex-col md:flex-row gap-12 items-start">
+                    <!-- Deskripsi Diri -->
+                    <div class="md:w-2/3 space-y-6 text-lg text-gray-700">
+                        <p>
+                            Saya adalah [Nama Anda], seorang [Profesi] yang bersemangat dalam [Bidang Minat Utama]. Dengan pengalaman selama **[X] tahun**, saya telah membantu klien dan tim dalam mewujudkan visi mereka, mulai dari konsep awal hingga peluncuran produk yang sukses.
+                        </p>
+                        <p>
+                            Filosofi saya dalam bekerja adalah selalu berpusat pada pengguna, memastikan bahwa setiap solusi yang saya bangun tidak hanya terlihat bagus tetapi juga memberikan pengalaman yang mudah, efektif, dan menyenangkan.
+                        </p>
+                        <a href="#" class="inline-block text-primary font-bold hover:underline">Download Resume Saya (PDF)</a>
+                    </div>
+
+                    <!-- Keahlian Utama -->
+                    <div class="md:w-1/3 w-full bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-secondary">Keahlian Inti</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center">
+                                <!-- Icon (Lucide icon: code) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                Pengembangan Web (HTML, CSS, JS)
+                            </li>
+                            <li class="flex items-center">
+                                <!-- Icon (Lucide icon: brush) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.94 4.87 4.87 1.41-1.41-4.87-4.87-1.41 1.41Z"/><path d="M18 10c-1.3-1.3-3-2.2-5-2.6v.5l.5.5-1.5 1.5-3.5 3.5"/><path d="m14 20-3-3.4c-.6-.6-1.4-1.6-2.3-3c-.4-.7-.9-1.5-1.4-2.2-.5-.7-1-1.5-1.6-2.2-.6-.8-1.3-1.6-2-2.5-1-1.3-1.4-2.8-1-4.4C3.8 3.5 4.9 3 6.3 3c1.6.4 3 1 4.4 2 1 .7 1.9 1.4 2.7 2.2 1 .9 1.9 2 2.7 3 1.4 1.8 2.6 3.6 3.5 5.2.3.6.5 1.2.6 1.8h-4.2Z"/></svg>
+                                Desain Grafis (Figma/Photoshop)
+                            </li>
+                            <li class="flex items-center">
+                                <!-- Icon (Lucide icon: zap) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                Optimasi SEO Dasar
+                            </li>
+                            <li class="flex items-center">
+                                <!-- Icon (Lucide icon: writing-hand) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 4 3 3-12.92 12.92a2.22 2.22 0 0 1-1.12.59l-2.18.33a.5.5 0 0 1-.5-.5l.33-2.18a2.22 2.22 0 0 1 .59-1.12L17 4Z"/></svg>
+                                Copywriting (Indonesia & Inggris)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section (Karya Unggulan) -->
+        <section id="projects" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold mb-12 pl-6 text-secondary section-heading inline-block">Karya Pilihan</h2>
+                
+                <!-- Grid Proyek -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Proyek 1 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <!-- Placeholder Gambar Proyek -->
+                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Project+1" alt="Project A Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-secondary">Aplikasi Manajemen Tugas</h3>
+                            <p class="text-gray-500 text-sm mb-4">Kategori: UI/UX & ReactJS</p>
+                            <p class="text-gray-700 mb-4 text-sm">Desain ulang total aplikasi task management untuk meningkatkan retensi pengguna sebesar 30%.</p>
+                            <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                                Lihat Detail
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 2 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <!-- Placeholder Gambar Proyek -->
+                        <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Project+2" alt="Project B Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-secondary">Website E-Commerce Fashion</h3>
+                            <p class="text-gray-500 text-sm mb-4">Kategori: Frontend Development</p>
+                            <p class="text-gray-700 mb-4 text-sm">Membangun landing page produk dengan fokus pada kecepatan loading dan desain mobile-first.</p>
+                            <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                                Lihat Detail
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 3 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <!-- Placeholder Gambar Proyek -->
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+3" alt="Project C Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-secondary">Branding & Logo Design</h3>
+                            <p class="text-gray-500 text-sm mb-4">Kategori: Branding & Visual</p>
+                            <p class="text-gray-700 mb-4 text-sm">Pengembangan identitas merek yang kohesif untuk startup di bidang teknologi edukasi.</p>
+                            <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                                Lihat Detail
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CTA untuk Proyek Lain -->
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-block px-8 py-3 bg-accent text-white font-bold rounded-xl shadow-lg hover:bg-amber-600 transition duration-300 transform hover:scale-105">
+                        Lihat Semua Proyek (Behance/Dribbble)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Hubungi Saya) -->
+        <section id="contact" class="py-20 bg-primary/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold mb-4 text-secondary">Tertarik Berkolaborasi?</h2>
+                <p class="text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
+                    Saya selalu terbuka untuk proyek baru yang menarik dan kesempatan untuk berdiskusi. Mari ciptakan sesuatu yang luar biasa bersama.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Tombol Email -->
+                    <a href="mailto:emailanda@contoh.com" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 border border-primary/20">
+                        <!-- Icon (Lucide icon: mail) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.83 1.83 0 0 1-2.06 0L2 7"/></svg>
+                        <span class="text-lg font-medium text-gray-800">emailanda@contoh.com</span>
+                    </a>
+
+                    <!-- Tombol LinkedIn -->
+                    <a href="https://linkedin.com/in/namaanda" target="_blank" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 border border-primary/20">
+                        <!-- Icon (Lucide icon: linkedin) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        <span class="text-lg font-medium text-gray-800">LinkedIn Saya</span>
+                    </a>
+
+                     <!-- Tombol WhatsApp (Opsional) -->
+                    <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 border border-primary/20">
+                        <!-- Icon (Inline SVG for WhatsApp for simplicity) -->
+                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 3.033 1.285 5.772 3.358 7.697l-1.353 3.303 3.615-1.18c.983.54 2.115.86 3.28.86 5.523 0 10-4.477 10-10C22 6.477 17.523 2 12 2zm4.5 13.5c-.276.138-.6.236-1.5.06c-.9-.176-3.812-1.5-4.404-1.745-.592-.245-1.013-.367-1.433.327-.42.694-1.626 2.083-1.986 2.503-.36.42-.72.474-1.341.15-.62-.325-2.45-1.096-4.665-2.903-1.697-1.41-2.846-3.15-3.17-3.71-.324-.56.035-.86.234-1.06.198-.198.428-.56.634-.784.207-.225.263-.42.443-.634.18-.214.6-.534.82-.79.22-.257.293-.474.45-.634.156-.16.89-.526 1.636-.202.747.323 1.217.763 1.373.953.156.19.263.42.42.634.156.214.283.473.283.743 0 .27-.04.81-.22 1.33-.178.52-.396.694-.657.92-.26.225-.56.51-.86.79l.54.54c1.1 1.1 2.45 2.1 3.5 2.5.95.4 1.84.6 2.5.4.66-.2.83-.55 1.05-.77.22-.22.42-.56.634-.784.214-.22.46-.35.74-.28.28.07.7.35 1.05.52.35.17.63.44.78.6.15.16.27.35.37.5.1.15.13.3.1.45 0 .15-.06.3-.15.45-.09.15-.22.3-.37.45l-.47.47z" fill="#25D366"/>
+                        </svg>
+                        <span class="text-lg font-medium text-gray-800">WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Formulir Kontak Sederhana (Jika ingin lebih fungsional) -->
+                <!-- Untuk portofolio sederhana, link langsung lebih diutamakan -->
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">Dibuat dengan ❤️ dan Tailwind CSS.</p>
+            <p class="text-sm mt-1">&copy; 2025 [Nama Anda]. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
